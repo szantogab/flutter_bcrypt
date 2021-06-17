@@ -135,8 +135,8 @@ class FlutterBcryptPlugin: MethodCallHandler {
         else -> result.notImplemented()
       }
     } catch (e: Exception) {
-      Log.e("flutter_bcrypt", e.message)
-      result.error("flutter_bcrypt", e.message, e)
+      Log.e("flutter_bcrypt", e.message ?: "")
+      result.error("flutter_bcrypt", e.message ?: "", e)
     }
 
 
